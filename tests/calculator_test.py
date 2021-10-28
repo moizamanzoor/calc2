@@ -36,5 +36,11 @@ def test_calculator_multiply():
 def test_calculator_divide():
     """Testing Division method of the calculator"""
     calc = Calculator()
-    calc.divide_number(1)
-    assert calc.get_result() == 0
+    calc.divide_number(1,1)
+    assert calc.get_result() == 1
+
+def test_calculator_divide2():
+    """testing division method with zero as denominator"""
+    calc = Calculator()
+    calc.divide_number(1,0)
+    assert calc.get_result() == "error cannot divide by zero"

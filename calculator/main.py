@@ -25,6 +25,10 @@ class Calculator:
         """ multiply  number result"""
         return self.result * value_a
 
-    def divide_number(self, value_a):
+    def divide_number(self, value_a, value_b):
         """ divide result by a number"""
-        return self.result / value_a
+        if value_b != 0:
+            self.result = value_a / value_b
+        else:
+            self.result = "error cannot divide by zero"
+        return self.result
