@@ -8,6 +8,5 @@ class Division(Calculation):
         result = 1.0
         for value in self.values:
             result = result / value
-            if value == 0:
-                result = ZeroDivisionError
-            return result
+        return result
+
